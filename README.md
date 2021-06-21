@@ -5,7 +5,7 @@ gradle downloadChromeDriver
 ```
 
 ## Installation
-If using my selenium hub :
+###If using my selenium hub :
 1. Populate framework.properties with
  * seleniumHub=http://78.130....
  * use_local_chrome_driver=false
@@ -14,11 +14,12 @@ If using my selenium hub :
 gradle clean test
 ```
 
-If using self-ran selenium grid 
+###If using self-ran selenium grid 
 1. Populate framework.properties with  
- * seleniumHub=http://localhost:4445/wd/hub  
+ * seleniumHub=http://localhost:4445/wd/hub   
  * use_local_chrome_driver=false 
-tasks for hub:
+  
+  tasks for hub:
 ```
 gradle startWebDriverGridHub
 ```
@@ -28,6 +29,8 @@ gradle startWebDriverGridNode
 ```
 gradle shutDownNodeAndHub
 ```
+
+
 
 
 2. npm install  
