@@ -1,0 +1,7 @@
+.allure/
+target/
+.idea/
+gradle/
+.gradle/
+build/
+src/main/resources
