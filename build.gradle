@@ -79,7 +79,7 @@ task shutDownNodeAndHub(type: Exec) {
     }
 }
 
-task setupChromeDriver(type: Download) {
+task downloadChromeDriver(type: Download) {
     def driverOsFilenamePart
     if (Os.isFamily(Os.FAMILY_WINDOWS)) {
         driverOsFilenamePart = "win32"
@@ -90,11 +90,12 @@ task setupChromeDriver(type: Download) {
     }
     src "http://chromedriver.storage.googleapis.com/${chromeDriverVersion}/chromedriver_${driverOsFilenamePart}.zip"
     dest "$buildDir/webdriver/chromedriver.zip"
+
     def downloadFile = file("$buildDir/webdriver/chromedriver.zip")
     def outputDir = file("$projectDir/src/test/resources/")
     inputs.property("chromeDriverVersion", chromeDriverVersion)
     outputs.dir(outputDir)
-    doFirst {
+    doLast {
         copy{
             from(zipTree(downloadFile))
             into(outputDir)
