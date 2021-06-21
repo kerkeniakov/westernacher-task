@@ -9,7 +9,7 @@ gradle downloadChromeDriver
 1. Populate framework.properties with
  * seleniumHub=http://78.130....
  * use_local_chrome_driver=false
-2. execute 
+2. Execute 
 ```
 gradle clean test
 ```
@@ -18,8 +18,10 @@ gradle clean test
 1. Populate framework.properties with  
  * seleniumHub=http://localhost:4445/wd/hub   
  * use_local_chrome_driver=false 
-  
-  tasks for hub:
+  tasks related to spawning or killing the selenium hub + node:  
+```
+gradle downloadSeleniumHub
+```
 ```
 gradle startWebDriverGridHub
 ```
@@ -29,13 +31,12 @@ gradle startWebDriverGridNode
 ```
 gradle shutDownNodeAndHub
 ```
+### If you want to run a local chromewebdriver
+1. Populate framework.properties with  
+ * seleniumHub=<can be blank>
+ * use_local_chrome_driver=true 
+2. Execute 
+```
+gradle setupChromeDriver
+```
 
-
-
-
-2. npm install  
-3. npm run tests:chrome -> runs the whole test suite on chrome
- * npm run tests:firefox -> runs the whole test suite on firefox
- * for specific test cases you can use the manual command instead of the scripted one. For example:
->  node node_modules/protractor/bin/protractor ./conf.js --suite clickAndProtocols --params.browser=firefox  
->  node node_modules/protractor/bin/protractor ./conf.js --suite searchWidget --params.browser=chrome
