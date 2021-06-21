@@ -53,7 +53,7 @@ gradle setupChromeDriver
   Reporting framework used is Allure. After each execution it should generate output in \build\allure-results.
 ### What I'm not happy about and what I really need to refactor but couldn't given that this is my first time time coding in Java and also time-limits:
   - Abstract away all the @BeforeEach and @After each etc. I should probably create an abstract class and let every test extend it?
-  - Create a DriverFactory for spawning local browsers
+  - Create a DriverFactory for spawning local browsers. Going with Singleton wasn't my greatest great idea.
   - Implement parralel test run
   - Better logging
   - attach screenshots/videos of each test steps to allure report
