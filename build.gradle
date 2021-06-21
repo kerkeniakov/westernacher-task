@@ -79,7 +79,7 @@ task shutDownNodeAndHub(type: Exec) {
     }
 }
 
-task downloadChromeDriver(type: Download) {
+    task setupChromeDriver(type: Download) {
     def driverOsFilenamePart
     if (Os.isFamily(Os.FAMILY_WINDOWS)) {
         driverOsFilenamePart = "win32"
