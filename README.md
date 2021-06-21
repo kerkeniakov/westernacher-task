@@ -9,7 +9,7 @@
 ```
 gradle clean test
 ```
-executes all test cases.
+> executes all test cases.
 
 ### If using self-ran selenium grid 
 1. Populate framework.properties with  
@@ -19,11 +19,11 @@ executes all test cases.
 ```
 gradle downloadSeleniumHub
 ```
-downloads selenium jar file in root dir.
+> downloads selenium jar file in root dir.
 ```
 gradle startWebDriverGridHub
 ```
-starts webdriver grid @ 4445.
+> starts webdriver grid @ 4445.
 ```
 gradle startWebDriverGridNode
 ```
