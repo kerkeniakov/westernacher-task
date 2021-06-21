@@ -1,8 +1,4 @@
 # Westernacher task
-task list:
-```
-gradle downloadChromeDriver
-```
 
 ## Installation
 ### If using my selenium hub :
